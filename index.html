@@ -774,7 +774,7 @@ body{background-image:radial-gradient(circle at 15% 0%,rgba(184,108,255,.18),tra
           <div class="daily-missions-subtitle">Complete missions to earn coins</div>
         </div>
         <div class="daily-missions-summary-stats">
-          <strong id="dailyMissionsCompletedEl">0 / 10 Completed</strong>
+          <strong id="dailyMissionsCompletedEl">0 / 8 Completed</strong>
           <span id="dailyMissionsCoinsEl">+0 Coins</span>
         </div>
         <i class="bi bi-chevron-right daily-missions-chevron"></i>
@@ -1117,11 +1117,9 @@ const dailyMissionConfig = [
   {id:"mission2",name:"Play 2 Tournaments",target:2,type:"tournaments",icon:"bi-controller"},
   {id:"mission3",name:"Complete 3 Matches",target:3,type:"matches",icon:"bi-flag-fill"},
   {id:"mission4",name:"Complete 5 Matches",target:5,type:"matches",icon:"bi-flag-fill"},
-  {id:"mission5",name:"Win 1 Match",target:1,type:"wins",icon:"bi-trophy-fill"},
-  {id:"mission6",name:"Win 2 Matches",target:2,type:"wins",icon:"bi-trophy-fill"},
+  {id:"mission5",name:"Win 3 Matches",target:3,type:"wins",icon:"bi-trophy-fill"},
+  {id:"mission6",name:"Win 4 Matches",target:4,type:"wins",icon:"bi-trophy-fill"},
   {id:"mission7",name:"Play 3 Tournaments",target:3,type:"tournaments",icon:"bi-controller"},
-  {id:"mission8",name:"Complete 1 Lone Wolf Match",target:1,type:"loneWolf",icon:"bi-lightning-charge-fill"},
-  {id:"mission9",name:"Complete 1 CS 1v1 Match",target:1,type:"cs1v1",icon:"bi-crosshair"},
   {id:"mission10",name:"Complete 5 Matches",target:5,type:"matches",icon:"bi-flag-fill"}
 ];
 
@@ -1294,7 +1292,7 @@ function render(progress,state){
   }).join("");
   list.innerHTML=html;
   const ce=$("dailyMissionsCompletedEl"), co=$("dailyMissionsCoinsEl");
-  if(ce)ce.textContent=`${completed} / 10 Completed`;
+  if(ce)ce.textContent=`${completed} / 8 Completed`;
   if(co)co.textContent=`+${earned} Coins`;
 }
 
